@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Add Employe</title>
+  </head>
+  <body>
+    {% include 'navbar.html'%}
+    <h1 class= 'text-center my-3'>Add new employe</h1>
+    <div class = "container">
+        <div class = "row">
+            <div class = "col-md-8 offset-md-2">
+                <div class = "card bg-info">
+                    <div class = "card-body">
+                        <form action= "add-emp" method="POST">
+                             {% csrf_token %}
+                            <div class = "md-3">
+                                <label for="empid">Empid</label>
+                                <input name="e_id" type='text' id="Empid" class = "form-control">
+                            </div>
+                            <div class = "md-3">
+                                <label for="name">Name</label>
+                                <input name="e_name" type='text' id="Name" class = "form-control">
+                            </div>
+                            <div class = "md-3">
+                                <label for="email">Email</label>
+                                <input name="e_email"type='text' id="Email" class = "form-control">
+                            </div><br>
+                            <div class = "md-3">
+                                <label for="birth date">Birth Date</label>
+                                <input type="date" id="birthday" name="e_bdate">
+                            </div>
+                            <div class = "md-3">
+                                <label for="Gender">Gender</label><br>
+                                <input type="radio" id="html" name="e_gender" value="Male">
+                                <label for="male">Male</label><br>
+                                <input type="radio" id="css" name="e_gender" value="Female">
+                                <label for="female">Female</label><br>
+                            </div>
+                            <div class = "md-3">
+                                <label for="adress">Address</label>
+                                <textarea name="e_address" id= "adderss" row= "5" class = "form-control"></textarea>
+                            </div><br>
+                            <div class = "md-3">
+                                    <label for="position">Position:</label>
+                                    <select name="e_position" id="position">
+                                    <option value="Python developer">Python developer</option>
+                                    <option value="Java developer">Java developer</option>
+                                    <option value="Dotnet developer">Dotnet developer</option>
+                                    <option value="ML engenieer">ML engenieer</option>
+                                    <option value="Data analyst">Data Analyst</option>
+                                    <option value="Data scientist">Data Scientist</option>
+                                    <option value="HR">HR</option>
+                                    <option value="Database engenieer">Database engenieer</option>
+                                    </select>
+
+                            </div>
+                            <div class = "md-3">
+                                <label for="salary">Salary</label>
+                                <input name="e_salary"type='text' id="Salary" class = "form-control">
+                            </div>
+                            <div class = "md-3">
+                                <label for="phone no">Phone no</label>
+                                <input name="e_phone"type='text' id="Phone no" class = "form-control">
+                            </div>
+                            <div class = "container text-center my-2">
+                                <button class="btn btn-primary">
+                                    Add employe
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
